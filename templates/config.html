@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration</title>
+    <p>IPS</p>
+    <a href="#" id="list_ips">Show IPS</a> <br>
+    <a id = "ips"></a>
+    <form id = "add_ip" method="post">
+        <p>add ip address</p>
+        <input id="ipAdr" name="ipAdr" type="text" placeholder="IP Address" required><br>
+        <input id='riskN' name="riskN" type="number" min="1" max="5" placeholder="Risk factor (1=no risk, 5=high risk)" required><br>
+        <input id="comments" name="comments" type="text" placeholder="comments"><br>
+        <input type="submit" value="Submit">
+    </form>
+<body>
+    
+</body>
+</html>

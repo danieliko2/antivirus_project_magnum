@@ -1,7 +1,7 @@
 from doctest import testmod
 from flask import Flask
 from flask import render_template, request, jsonify
-from anti_virus import print_me, add_ip, testPage
+from anti_virus import print_me, add_ip, testPage, get_ips
 from scapy.all import *
 import selenium
 from selenium import webdriver
@@ -44,9 +44,11 @@ def config():
     return render_template("config.html")
 
 @app.route("/list_ips")
-def get_ips():
-    print("listing ips")
-    return ("this is the ip!")
+def list_ips():
+    ips = get_ips()
+    print(ips)
+    return (str(ips))
+    # return('test')
 
 def printer(ip):
     print_me("me!#")

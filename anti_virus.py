@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-browser = webdriver.Firefox(executable_path="/home/john/Desktop/antivirus project/drivers/geckodriver")
+browser = webdriver.Firefox(executable_path="drivers/geckodriver")
 wait = WebDriverWait(browser, 3)
 visible = EC.visibility_of_element_located
 
@@ -30,3 +30,9 @@ def add_ip(ipData):
     with open("data/data.csv", "a") as f:
         write = csv.writer(f)
         write.writerow(ipData)
+
+def get_ips():
+    with open("data/data.csv", "r") as f:
+        csvRead = csv.reader(f)
+        rows = list(csvRead)
+        return rows

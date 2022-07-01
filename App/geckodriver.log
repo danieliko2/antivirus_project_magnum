@@ -156,3 +156,26 @@ deleteSession()@WebDriverBiDi.jsm:143
 stop()@WebDriverBiDi.jsm:218
 observe()@resource://gre/modules/AsyncShutdown.jsm:575
 Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1656679019336	geckodriver	INFO	Listening on 127.0.0.1:44177
+1656679019340	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "58733" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJzzbWa"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1656679019880	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:58733
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJzzbWa/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+1656679020622	Marionette	INFO	Listening on port 37979
+Read port: 37979
+DevTools listening on ws://localhost:58733/devtools/browser/159e5939-129a-4eae-86e1-a3d45a6c5c57
+1656679020654	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1969\"  data: no]"
+1656679023134	Marionette	INFO	Stopped listening on port 37979
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1656679023414	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)

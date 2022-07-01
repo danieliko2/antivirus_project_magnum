@@ -55,4 +55,4 @@ def printer(ip):
 
 
 ip = "123"
-# sniff(filter="src 2a10:8003:43a0:0:9ac8:d870:5d89:32c0", prn=printer(ip))
+# sniff(filter="src 2a10:8003:43a0:0:9ac8:d870:5d89:32c0", prn=printer(ip)) 

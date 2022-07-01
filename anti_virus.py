@@ -7,9 +7,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-browser = webdriver.Firefox(executable_path="drivers/geckodriver")
-wait = WebDriverWait(browser, 3)
-visible = EC.visibility_of_element_located
+# browser = webdriver.Firefox(executable_path="drivers/geckodriver")
+# wait = WebDriverWait(browser, 3)
+# visible = EC.visibility_of_element_located
 
 def testPage(page):
     browser.get(page)

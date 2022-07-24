@@ -1,7 +1,7 @@
 from doctest import testmod
 from flask import Flask
 from flask import render_template, request, jsonify
-from anti_virus import print_me, add_ip, testPage
+from anti_virus import print_me, add_ip
 from scapy.all import *
 import selenium
 from selenium import webdriver
@@ -17,9 +17,9 @@ def hello_world():
 
 @app.route("/listen", methods=['GET', 'POST'])
 def listen():
-    if request.method == 'POST':
-        webURL = request.form['webURL']
-        testPage(webURL)
+    # if request.method == 'POST':
+    #     webURL = request.form['webURL']
+    #     testPage(webURL)
     return render_template("listen.html")
 
 @app.route("/config", methods=['GET', 'POST'])

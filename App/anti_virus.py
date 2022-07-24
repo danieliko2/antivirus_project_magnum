@@ -11,15 +11,15 @@ browser = webdriver.Firefox(executable_path="./drivers/geckodriver")
 wait = WebDriverWait(browser, 3)
 visible = EC.visibility_of_element_located
 
-def testPage(page):
-    browser.get(page)
-    wait.until(visible((By.ID, "video-title")))
-    browser.find_element_by_id("video-title").click()
-    browser.minimize_window()
-    time.sleep(7)
-    browser.quit()
+# def testPage(page):
+#     browser.get(page)
+#     wait.until(visible((By.ID, "video-title")))
+#     browser.find_element_by_id("video-title").click()
+#     browser.minimize_window()
+#     time.sleep(7)
+#     browser.quit()
 
-testPage("http://www.google.com")
+# testPage("http://www.google.com")
 
 def print_me(me):
     print(me)

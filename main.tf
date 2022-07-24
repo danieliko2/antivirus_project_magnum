@@ -1,7 +1,7 @@
 provider "aws" {
     region = "eu-central-1"
-    access_key = "***REMOVED***"
-    secret_key = "***REMOVED***"
+    access_key = my_access_key
+    secret_key = my_secret_key
 }
 
 resource "aws_vpc" "prod-vpc" {

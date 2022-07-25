@@ -1,0 +1,47 @@
+version: '3.6'
+
+services:
+  dev:
+    image: 'alpine:latest'
+    volumes:
+      - './App/:/app'
+    ports:
+      - "8082:8082"
+      
+  jenkins:
+    build:
+      context: .
+      dockerfile: "MyJenkins.Dockerfile"
+    # image: 'jenkins/jenkins:2.343'
+    container_name: jenkins
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - 'jenkins_home:/var/jenkins_home'
+      - './App/:/av_folder'
+    ports:
+      - 8080:8080
+      - 50000:50000
+
+  gitlab:
+    container_name: gitlab
+    image: 'gitlab/gitlab-ce:14.7.7-ce.0'
+    hostname: 'gitlab'
+    environment:
+      - GITLAB_HOME=/srv/gitlab
+    ports:
+      - '8081:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
+
+volumes:
+  jenkins_home:
+
+networks:
+  default:
+    external:
+      name: ci_net
